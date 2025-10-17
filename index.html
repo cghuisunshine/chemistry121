@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Quantum-Theoretical Organization of Chemistry — Copy-on-Double-Click</title>
+<style>
+  :root{
+    --bg:#0b1020; --panel:#0f1733; --ink:#e8ecff; --muted:#a9b3d1; --accent:#8bb2ff; --accent2:#6ee7b7;
+    --ring: rgba(139,178,255,.25); --hover: rgba(139,178,255,.08); --copied: rgba(110,231,183,.18);
+    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  }
+  * { box-sizing:border-box }
+  html,body { height:100% }
+  body{
+    margin:0; color:var(--ink); background: radial-gradient(1200px 800px at 10% -10%, #1b2452 0%, #0b1020 40%, #050815 100%);
+    font-family: var(--sans); line-height:1.5;
+  }
+  .wrap{ max-width: 1100px; margin: clamp(16px,3vw,32px) auto; padding: clamp(16px,3vw,32px); background: color-mix(in oklab, var(--panel) 92%, black 8%);
+         border:1px solid rgba(255,255,255,.06); border-radius:16px; box-shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);}
+  header h1{ margin:0 0 8px; font-size: clamp(22px, 3.2vw, 36px); letter-spacing:.2px }
+  header p{ margin:.25rem 0 1rem; color:var(--muted) }
+  hr { border:0; height:1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent); margin: 20px 0;}
+  /* Copyable target styling */
+  [data-copyable]{
+    position:relative; border-radius:10px; padding: .15rem .4rem; margin-left: -.4rem; margin-right: -.4rem;
+    transition: background .12s ease, box-shadow .12s ease, transform .05s ease;
+    cursor: copy;
+  }
+  [data-copyable]:hover{ background: var(--hover); box-shadow: 0 0 0 3px var(--ring); }
+  [data-copyable].copied{ background: var(--copied); outline: 2px solid rgba(110,231,183,.5); }
+  h2, h3 { margin: 1.2rem 0 .25rem; }
+  h2{ font-size: clamp(18px,2.3vw,26px); color: var(--accent) }
+  h3{ font-size: clamp(16px,2vw,22px); color: var(--accent2) }
+  ul{ margin:.2rem 0 .75rem 1.25rem; padding:0 }
+  li{ margin:.15rem 0 }
+  .legend{ font: 12px/1.4 var(--mono); color:var(--muted); margin-top:.5rem }
+  /* Toast */
+  .toast{
+    position: fixed; top: 14px; right: 14px; background: #0a1b12; color:#d5ffe9; border:1px solid rgba(110,231,183,.4);
+    padding:10px 12px; border-radius:10px; font-size:14px; display:none; box-shadow: 0 10px 24px rgba(0,0,0,.35);
+  }
+  .kbd{ font: 11px/1 var(--mono); background: rgba(255,255,255,.08); padding:2px 6px; border-radius:6px; border:1px solid rgba(255,255,255,.14) }
+</style>
+</head>
+<body>
+  <div class="wrap" id="content">
+    <header>
+      <h1 data-copyable>🧠 Quantum-Theoretical Organization of Chemistry</h1>
+      <p class="legend">Tip: <span class="kbd">Double-click</span> any line (heading, bullet, or paragraph) to copy it.</p>
+    </header>
+
+    <section>
+      <h2 data-copyable>I. Foundations of Quantum Chemistry</h2>
+      <h3 data-copyable>1. Historical Background</h3>
+      <ul>
+        <li data-copyable>Classical failures (blackbody radiation, photoelectric effect, atomic spectra)</li>
+        <li data-copyable>Birth of quantum mechanics (Planck, Einstein, Bohr, Schrödinger)</li>
+      </ul>
+      <h3 data-copyable>2. Mathematical Framework</h3>
+      <ul>
+        <li data-copyable>Wave–particle duality</li>
+        <li data-copyable>Operators, observables, eigenvalues</li>
+        <li data-copyable>Schrödinger equation (time-dependent and time-independent forms)</li>
+        <li data-copyable>Boundary conditions and normalization</li>
+        <li data-copyable>Quantum numbers and degeneracy</li>
+        <li data-copyable>Probability density and expectation values</li>
+        <li data-copyable>Approximation methods (perturbation, variational principles)</li>
+      </ul>
+      <h3 data-copyable>3. Postulates of Quantum Mechanics</h3>
+      <ul>
+        <li data-copyable>State vectors and wavefunctions</li>
+        <li data-copyable>Observables as operators</li>
+        <li data-copyable>Measurement and eigenvalues</li>
+        <li data-copyable>Superposition and linearity</li>
+        <li data-copyable>Time evolution of states</li>
+      </ul>
+      <hr />
+    </section>
+
+    <section>
+      <h2 data-copyable>II. Atomic Quantum Theory</h2>
+      <h3 data-copyable>1. The Hydrogen Atom</h3>
+      <ul>
+        <li data-copyable>Solving Schrödinger’s equation for hydrogen</li>
+        <li data-copyable>Quantum numbers (n, l, mₗ, mₛ)</li>
+        <li data-copyable>Energy levels and degeneracy</li>
+        <li data-copyable>Orbitals (s, p, d, f) and their shapes</li>
+        <li data-copyable>Radial and angular wavefunctions</li>
+      </ul>
+      <h3 data-copyable>2. Many-Electron Atoms</h3>
+      <ul>
+        <li data-copyable>Electron–electron repulsion</li>
+        <li data-copyable>Approximation methods (Hartree, Hartree–Fock)</li>
+        <li data-copyable>Effective nuclear charge and screening</li>
+        <li data-copyable>Aufbau principle, Pauli exclusion, Hund’s rule</li>
+      </ul>
+      <h3 data-copyable>3. Atomic Spectra and Spin</h3>
+      <ul>
+        <li data-copyable>Spin–orbit coupling</li>
+        <li data-copyable>Term symbols and fine structure</li>
+        <li data-copyable>Zeeman and Stark effects</li>
+      </ul>
+      <hr />
+    </section>
+
+    <section>
+      <h2 data-copyable>III. Quantum Theory of Chemical Bonding</h2>
+      <h3 data-copyable>1. Valence Bond Theory (VBT)</h3>
+      <ul>
+        <li data-copyable>Concept of orbital overlap</li>
+        <li data-copyable>σ and π bonds</li>
+        <li data-copyable>Resonance and delocalization</li>
+        <li data-copyable>Hybridization (sp, sp², sp³, etc.)</li>
+        <li data-copyable>Spin pairing and bond energy</li>
+      </ul>
+      <h3 data-copyable>2. Molecular Orbital Theory (MOT)</h3>
+      <ul>
+        <li data-copyable>Linear combination of atomic orbitals (LCAO)</li>
+        <li data-copyable>Bonding, antibonding, and nonbonding orbitals</li>
+        <li data-copyable>Energy-level diagrams (H₂, O₂, N₂, etc.)</li>
+        <li data-copyable>Bond order and magnetic properties</li>
+        <li data-copyable>Delocalized π-systems (benzene, conjugation)</li>
+      </ul>
+      <h3 data-copyable>3. Comparison of VBT and MOT</h3>
+      <ul>
+        <li data-copyable>Strengths and limitations of each</li>
+        <li data-copyable>Modern hybrid models (Natural Bond Orbitals, NBOs)</li>
+      </ul>
+      <hr />
+    </section>
+
+    <section>
+      <h2 data-copyable>IV. Quantum Mechanics of Molecular Structure</h2>
+      <h3 data-copyable>1. Molecular Geometry and Symmetry</h3>
+      <ul>
+        <li data-copyable>Quantum-mechanical basis of geometry</li>
+        <li data-copyable>Group theory and symmetry operations</li>
+        <li data-copyable>Point groups and irreducible representations</li>
+        <li data-copyable>Applications: hybrid orbitals, vibrational modes</li>
+      </ul>
+      <h3 data-copyable>2. Electron Density and Molecular Orbitals</h3>
+      <ul>
+        <li data-copyable>Density functional theory (DFT) concepts</li>
+        <li data-copyable>Electron density ρ(r) and bonding analysis</li>
+        <li data-copyable>Molecular electrostatic potential surfaces</li>
+      </ul>
+      <hr />
+    </section>
+
+    <section>
+      <h2 data-copyable>V. Quantum Description of Spectroscopy</h2>
+      <h3 data-copyable>1. Interaction of Light and Matter</h3>
+      <ul>
+        <li data-copyable>Quantized energy transitions</li>
+        <li data-copyable>Selection rules (Δl, Δmₗ, etc.)</li>
+        <li data-copyable>Absorption and emission</li>
+      </ul>
+      <h3 data-copyable>2. Types of Spectroscopy</h3>
+      <ul>
+        <li data-copyable><strong>Electronic:</strong> UV–Vis, photoelectron spectroscopy</li>
+        <li data-copyable><strong>Vibrational:</strong> IR, Raman</li>
+        <li data-copyable><strong>Rotational:</strong> Microwave spectra</li>
+        <li data-copyable><strong>Magnetic:</strong> NMR, ESR</li>
+        <li data-copyable><strong>X-ray:</strong> Core-level transitions, XPS</li>
+      </ul>
+      <h3 data-copyable>3. Time-Dependent Quantum Mechanics</h3>
+      <ul>
+        <li data-copyable>Transition probabilities</li>
+        <li data-copyable>Fermi’s golden rule</li>
+        <li data-copyable>Einstein coefficients</li>
+      </ul>
+      <hr />
+    </section>
+
+    <section>
+      <h2 data-copyable>VI. Quantum Basis of Chemical Reactivity</h2>
+      <h3 data-copyable>1. Potential Energy Surfaces (PES)</h3>
+      <ul>
+        <li data-copyable>Reaction coordinates and transition states</li>
+        <li data-copyable>Quantum tunneling and barrier penetration</li>
+      </ul>
+      <h3 data-copyable>2. Orbital Symmetry and Conservation</h3>
+      <ul>
+        <li data-copyable>Woodward–Hoffmann rules</li>
+        <li data-copyable>Frontier molecular orbital (FMO) theory (HOMO–LUMO interactions)</li>
+      </ul>
+      <h3 data-copyable>3. Quantum Dynamics of Reactions</h3>
+      <ul>
+        <li data-copyable>Wavepacket motion</li>
+        <li data-copyable>Non-adiabatic transitions (Born–Oppenheimer breakdown)</li>
+      </ul>
+      <hr />
+    </section>
+
+    <section>
+      <h2 data-copyable>VII. Computational Quantum Chemistry</h2>
+      <h3 data-copyable>1. Ab Initio Methods</h3>
+      <ul>
+        <li data-copyable>Hartree–Fock, post-HF (MP2, CCSD, etc.)</li>
+        <li data-copyable>Basis sets and convergence</li>
+      </ul>
+      <h3 data-copyable>2. Density Functional Theory (DFT)</h3>
+      <ul>
+        <li data-copyable>Functionals, exchange–correlation approximations</li>
+        <li data-copyable>Strengths and limitations</li>
+      </ul>
+      <h3 data-copyable>3. Semiempirical and Molecular Mechanics Methods</h3>
+      <ul>
+        <li data-copyable>Hückel, CNDO, AM1, PM6</li>
+        <li data-copyable>QM/MM hybrid approaches</li>
+      </ul>
+      <h3 data-copyable>4. Visualization and Analysis</h3>
+      <ul>
+        <li data-copyable>Molecular orbital plots, electron density maps, vibrational modes</li>
+      </ul>
+      <hr />
+    </section>
+
+    <section>
+      <h2 data-copyable>VIII. Extensions and Advanced Topics</h2>
+      <h3 data-copyable>1. Relativistic Quantum Chemistry</h3>
+      <ul>
+        <li data-copyable>Dirac equation, spin–orbit coupling</li>
+        <li data-copyable>Effects in heavy atoms</li>
+      </ul>
+      <h3 data-copyable>2. Quantum Description of Solids</h3>
+      <ul>
+        <li data-copyable>Band theory, Bloch functions</li>
+        <li data-copyable>Metals, semiconductors, insulators</li>
+      </ul>
+      <h3 data-copyable>3. Quantum Thermodynamics</h3>
+      <ul>
+        <li data-copyable>Partition functions from energy levels</li>
+        <li data-copyable>Quantum statistics (Fermi–Dirac, Bose–Einstein)</li>
+      </ul>
+      <h3 data-copyable>4. Quantum Information and Chemistry</h3>
+      <ul>
+        <li data-copyable>Quantum computing applications</li>
+        <li data-copyable>Quantum simulation of molecules</li>
+      </ul>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">Copied ✔</div>
+
+<script>
+(function(){
+  const container = document.getElementById('content');
+  const toast = document.getElementById('toast');
+
+  // Event delegation: copy on double-click
+  container.addEventListener('dblclick', async (ev) => {
+    const target = ev.target.closest('[data-copyable]');
+    if(!target) return;
+
+    // Get clean, single-line text
+    const text = (target.innerText || target.textContent || "").replace(/\s+/g,' ').trim();
+    if(!text) return;
+
+    // Copy with Clipboard API + fallback
+    try{
+      await navigator.clipboard.writeText(text);
+    }catch(e){
+      // Fallback: temporary textarea
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try{ document.execCommand('copy'); }catch(_){}
+      ta.remove();
+    }
+
+    // Visual feedback
+    target.classList.add('copied');
+    setTimeout(()=> target.classList.remove('copied'), 650);
+
+    // Toast
+    showToast('Copied ✔');
+  }, { passive:true });
+
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.style.display = 'block';
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(-6px)';
+    requestAnimationFrame(()=>{
+      toast.style.transition = 'opacity .18s ease, transform .18s ease';
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateY(0)';
+    });
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(()=>{
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateY(-6px)';
+      setTimeout(()=>{ toast.style.display='none'; }, 200);
+    }, 1100);
+  }
+
+  // Optional: make headings and list items keyboard-copyable with Enter (accessibility)
+  container.addEventListener('keydown', async (ev)=>{
+    if(ev.key !== 'Enter') return;
+    const target = ev.target.closest('[data-copyable]');
+    if(!target) return;
+    ev.preventDefault();
+    target.dispatchEvent(new MouseEvent('dblclick', {bubbles:true}));
+  });
+
+  // Add tabindex for keyboard focus
+  Array.from(container.querySelectorAll('[data-copyable]')).forEach(el=>{
+    el.setAttribute('tabindex','0');
+    el.setAttribute('title','Double-click to copy');
+  });
+})();
+</script>
+</body>
+</html>
+
